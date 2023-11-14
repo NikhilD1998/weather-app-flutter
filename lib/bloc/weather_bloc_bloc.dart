@@ -22,7 +22,7 @@ class WeatherBlocBloc extends Bloc<WeatherBlocEvent, WeatherBlocState> {
         print(weather);
         emit(WeatherBlocSuccess(weather));
       } catch (e) {
-        print('Error Fetching');
+        print('Error Fetching $e');
         emit(WeatherBlocFailure());
       }
     });
